@@ -4,7 +4,7 @@ class Car:
     color = 'black'
     transmission = 'manual'
 
-    def __init__(self, transmission='manual'):
+    def __init__(self, transmission):
         self.transmission = transmission
         print('engine is ready')
 
@@ -26,13 +26,17 @@ class Car:
 
 
 #self mengacu pada class instance untuk mengakses atribute
-ferrari = Car('auto')
-ferrari.change_gear()
-ferrari.get_gear_position()
  
  #inheritance & overriding
 class Tesla(Car):
-    pass #for define class only
 
-tesla = Tesla()   
+    def drive(self):
+        print('LOL gas')
+
+# ferrari = Car('auto')
+# ferrari.change_gear()
+# ferrari.get_gear_position()
+
+tesla = Tesla('oke')   
 tesla.drive()
+
